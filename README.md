@@ -1,0 +1,7 @@
+# Advent Of Code 2025 Rust 
+
+# Execution
+Build all the exercises using the `make build` target. Execute them using the `DAY=X EJ=Y make run` target. 
+
+# Dependencies
+The user must have Rust installed on its computer in order to make the tool work. Install Rust following the [official documentation](https://www.rust-lang.org/tools/install)
