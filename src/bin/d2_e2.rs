@@ -121,10 +121,6 @@ fn get_invalid_ids_string_version(number: u64, digits: u32, multiples: &Vec<u32>
     0
 }
 
-fn get_invalid_ids_multiple_version(number: u64, digits: u32, multiples: &Vec<u32>) -> u64 {
-    number
-}
-
 /*---------------------------------------------------------------------------*/
 
 fn main() -> Result<(), Box<dyn Error>> {
