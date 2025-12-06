@@ -44,6 +44,11 @@ impl Range {
         //
         for value in self.initial..=self.end {
             let amount_digits = count_digits(value.try_into().unwrap());
+            if amount_digits == 1 {
+                // Special case: if the number has only one digit, there is nothing to be
+                // checked since the ID will always be valid
+                continue;
+            }
             sum += get_invalid_ids_string_version(
                 value,
                 amount_digits,
