@@ -122,6 +122,6 @@ fn main() -> Result<(), Box<dyn Error>> {
         rolls_removed = 0;
     }
 
-    info!("Day 4 - Exercise 1. Result: {}", total);
+    info!("Day 4 - Exercise 2. Result: {}", total);
     Ok(())
 }
