@@ -1,5 +1,4 @@
 use log::*;
-use std::collections::HashSet;
 use std::error::Error;
 use std::io::{BufRead, BufReader};
 
@@ -12,10 +11,6 @@ struct Range {
 }
 
 impl Range {
-    fn inside_range(&self, number: i64) -> bool {
-        number >= self.start && number <= self.end
-    }
-
     fn ids_in_range(&self) -> i64 {
         self.end - self.start + 1
     }
@@ -28,8 +23,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     let reader = BufReader::new(common::setup_input()?);
     let mut total = 0;
     let mut ranges: Vec<Range> = Vec::new();
-
-    let mut blank_line_found = false;
 
     for line in reader.lines() {
         let line = line?;
